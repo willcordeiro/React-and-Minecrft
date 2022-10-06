@@ -7,9 +7,7 @@ const setLocalStorage = (key, value) =>
 
 export const useStore = create((set) => ({
   texture: "dirt",
-  cubes: getLocalStorage("cubes") || [
-    { key: nanoid(), pos: [2, 0.5, 0], texture: "dirt" },
-  ],
+  cubes: getLocalStorage("cubes") || [],
   addCube: (x, y, z) => {
     set((prev) => ({
       cubes: [

@@ -6,9 +6,11 @@ import { useKeyboard } from "../hooks/useKeyboard";
 
 const JUMP_FORCE = 4;
 const SPEED = 4;
+
 export const Player = () => {
   const { moveBackward, moveForward, moveRight, moveLeft, jump } =
     useKeyboard();
+
   const { camera } = useThree();
   const [ref, api] = useSphere(() => ({
     mass: 1,
@@ -18,16 +20,12 @@ export const Player = () => {
 
   const vel = useRef([0, 0, 0]);
   useEffect(() => {
-    api.velocity.subscribe((v) => {
-      vel.current = v;
-    });
+    api.velocity.subscribe((v) => (vel.current = v));
   }, [api.velocity]);
 
   const pos = useRef([0, 0, 0]);
   useEffect(() => {
-    api.position.subscribe((p) => {
-      pos.current = p;
-    });
+    api.position.subscribe((p) => (pos.current = p));
   }, [api.position]);
 
   useFrame(() => {
@@ -57,7 +55,7 @@ export const Player = () => {
 
     api.velocity.set(direction.x, vel.current[1], direction.z);
 
-    if (jump && Math.abs(vel.current[1] < 0.05)) {
+    if (jump && Math.abs(vel.current[1]) < 0.05) {
       api.velocity.set(vel.current[0], JUMP_FORCE, vel.current[2]);
     }
   });
