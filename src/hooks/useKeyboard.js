@@ -9,7 +9,7 @@ function actionByKey(key) {
     Space: "jump",
     Digit1: "dirt",
     Digit2: "grass",
-    Digit3: "glass",
+    Digit6: "glass",
     Digit4: "wood",
     Digit5: "log",
   };
