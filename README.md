@@ -5,7 +5,7 @@
 
 
 ## About this Project
-This is an Application with react and three.js that creates minecraft in the user browser
+This is an Application with react and three.js that creates minecraft in the user browser. it's a simple version of minecraft but it's still fun to create using react, have fun!
 
 Connect with me at [LinkedIn](https://www.linkedin.com/in/william-cordeiro-568229238/)
 
