@@ -9,7 +9,7 @@ This is an Application with react and three.js that creates minecraft in the use
 
 Connect with me at [LinkedIn](https://www.linkedin.com/in/william-cordeiro-568229238/)
 
-You can access the website of this project at [COMMING SOON...]
+You can access the website of this project at [here](https://react-and-minecraft.vercel.app/)
 
 
 ### what you need to have to run this project
